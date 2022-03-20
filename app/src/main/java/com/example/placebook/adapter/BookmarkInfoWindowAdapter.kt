@@ -9,6 +9,7 @@ import com.example.placebook.databinding.ContentBookmarkInfoBinding
 
 class BookmarkInfoWindowAdapter(context: Activity) :
     GoogleMap.InfoWindowAdapter {
+
     private val binding = ContentBookmarkInfoBinding.inflate(context.layoutInflater)
 
     override fun getInfoWindow(marker: Marker): View? {

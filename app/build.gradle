@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -49,5 +50,17 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation "com.google.android.gms:play-services-location:19.0.1"
     implementation 'com.google.android.libraries.places:places:2.5.0'
+
+    implementation "androidx.activity:activity-ktx:1.1.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0-alpha04"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.0-alpha04"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0-alpha04"
+    kapt "androidx.lifecycle:lifecycle-compiler:2.5.0-alpha04"
+
+    implementation "androidx.room:room-runtime:2.4.2"
+    annotationProcessor "androidx.room:room-compiler:2.4.2"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0"
 
 }

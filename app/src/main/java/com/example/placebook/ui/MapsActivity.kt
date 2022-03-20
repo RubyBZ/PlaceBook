@@ -1,4 +1,4 @@
-package com.example.placebook
+package com.example.placebook.ui
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.core.app.ActivityCompat
+import com.example.placebook.R
 import com.example.placebook.adapter.BookmarkInfoWindowAdapter
 
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -90,7 +91,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
             }.addOnFailureListener { exception ->
                 if (exception is ApiException) {
                     val statusCode = exception.statusCode
-                    Log.e(TAG,
+                    Log.e(
+                        TAG,
                         "Place not found: " +
                                 exception.message + ", " +
                                 "statusCode: " + statusCode)
@@ -172,7 +174,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private fun requestLocationPermissions() {
         ActivityCompat.requestPermissions(this,
             arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-            REQUEST_LOCATION)
+            REQUEST_LOCATION
+        )
     }
 
     companion object {
